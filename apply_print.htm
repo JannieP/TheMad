@@ -1,0 +1,220 @@
+<head>
+<link href="css/themad.css" rel="stylesheet" type="text/css" />
+<title>GOMAD</title>
+<style type="text/css">
+<!--
+.style3 {color: #000000; font-weight: bold; }
+.style5 {font-weight: bold}
+.style6 {color: #FF0000}
+.style9 {color: #000000}
+.style13 {font-size: 10px}
+.style15 {color: #FF0000; font-weight: bold; }
+.style17 {color: #FF0000; font-weight: bold; font-size: 12px; }
+.style19 {color: #000000; font-size: 12px; }
+.style20 {color: #000000; font-size: 10px; }
+.style23 {color: #000000; font-size: 12; }
+-->
+</style>
+<script type="text/JavaScript">
+<!--
+var v_last = "item_1";
+var vn_last = "1";
+
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+//  selObj.options[selObj.selectedIndex].value
+//  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+//  if (restore) selObj.selectedIndex=0;
+}
+
+function addItem(p_last)
+{
+//   alert ('TEST1');
+   var v_str1 = "";
+   var v_str2 = "";
+   var v_len = 0;
+   var v_len1 = 0;
+   var v_counter = 0;
+
+   v_counter = p_last.substring(5);
+   v_str2 = p_last.substr(5);
+   v_len = p_last.length;
+   v_len1 = v_str2.length;
+   v_str1 = p_last.substr(0,(v_len - v_len1));
+   
+   v_counter++;
+    
+   v_str1 += v_counter;
+      
+//   alert (v_str1);
+//   alert (v_str2);
+//   alert (v_len);
+//   alert (v_counter);
+   v_last = v_str1;
+   vn_last = v_counter;
+
+   var v_html = "<span id='" +v_str1+ "'><tr><td><input name='textfield' type='text' size='5' style='border:none'></td></tr></span>"
+   
+   alert (v_html);
+   alert (document.getElementById('titems').innerHTML);
+  
+   document.getElementById('items').innerHTML = document.getElementById('items').innerHTML + v_html;
+
+}
+
+//-->
+</script>
+</head>
+<body>
+<table style="border:medium; border:#000000" width="676" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1" rowspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+    <td colspan="3" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr bgcolor="#000000">
+    <td width="373" height="107" colspan="1" align="left"><img src="images/gomad_blk.jpg" alt="gomad logo" width="160" height="72"></td>
+	<td width="213">
+	   <table>
+	      <tr>
+		     <td>Contact:&nbsp;</td>
+		  <tr>
+	      <tr>
+		     <td>Mobile:&nbsp;</td>
+		  <tr>
+	      <tr>
+		     <td>Fax:&nbsp;</td>
+		  <tr>
+	      <tr>
+		     <td>Email:&nbsp;</td>
+		  <tr>
+	   </table>	</td>
+    <td width="1" rowspan="2" bgcolor="#FFFFFF">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="82" colspan="2"><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>
+		  
+	<table width="100%">
+      <tr>
+        <td colspan="2" ><span class="style23">Client:&nbsp;</span></td>
+	  </tr>
+      <tr>
+        <td colspan="2" ><span class="style23">Client Contact:&nbsp;</span></td>
+	  </tr>
+      <tr>
+        <td colspan="2" >&nbsp;</td>
+	  </tr>
+      <tr>
+        <td width="50%"  style="border-bottom:double; border-bottom-color:#FF0000" ><span class="style3">QUOTE</span></td>
+        <td width="50%"  style="border-bottom:double; border-bottom-color:#FF0000"><span class="style3">Quote No: <span class="style6">Q-MAD-#### </span></span></td>
+      </tr>
+      <tr>
+	  <td colspan="2">
+      <table width="100%">
+	  <tr>
+        <td width="10" bgcolor="#CCCCCC"><span class="style20">QTY</span></td>
+        <td width="670" colspan="3" bgcolor="#CCCCCC"><span class="style20">Description</span></td>
+        <td width="10" bgcolor="#CCCCCC"><span class="style20">Unit Price </span></td>
+        <td width="10" bgcolor="#CCCCCC"><span class="style20">Price</span></td>
+	  </tr>
+	  <form name="form1" method="post" action="">
+      <tr>
+	  <td colspan="6">
+		  <span id="titems">
+		  <span id="item_1">test
+		  <table width="100%">
+		  <tr>
+			<td><input name="textfield" type="text" size="5" style="border:none"></td>
+			<td colspan="2">
+			  <select name="menu1" onChange="MM_jumpMenu('parent',this,0)" style="border:none">
+				<option value="http://localhost/themad_php/login.htm">asdfasdf</option>
+				<option value="http://localhost/themad_php/login.htm">asdfasd</option>
+				<option value="http://localhost/themad_php/login.htm">werqwftrwe</option>
+			  </select>			</td> 
+			<td><a href="#" style="border:none"><img border="0" src="images/c.gif" alt="Save" width="21" height="28"></a><a href="#" style="border:none"><img border="0" src="images/x.gif" alt="a" width="21" height="28"></a></td>
+			<td><input name="textfield" type="text" size="6" disabled="disabled" style="border:none"></td>
+			<td><input name="textfield2" type="text" size="6" disabled="disabled" style="border:none"></td>
+		  </tr>
+		  </table>
+		  </span>		  </span>		</td>
+		</tr>
+	  <tr>
+	    <td colspan="6"><input type="button" onClick="addItem(v_last)" name="Submit" value="Add Item"><input type="button" name="button" value="Accept"></td>
+	    </tr>
+	  </form>
+	  </table>
+	  <table width="100%">
+	    <tr>
+	      <td align="right">
+		    <table>
+			  <tr>
+			    <td width="100"><span class="style20">Sub Total:</span></td>
+			    <td width="20"><input name="textfield" type="text" size="10" disabled="disabled" style="border:none"></td>
+			  </tr>
+			  <tr>
+			    <td><span class="style20">VAT:</span></td>
+			    <td><input name="textfield" type="text" size="10" disabled="disabled" style="border:none"></td>
+			  </tr>
+			  <tr>
+			    <td><span class="style20">Total:</span></td>
+			    <td><input name="textfield3" type="text" size="10" disabled="disabled" style="border:none"></td>
+			  </tr>
+			</table>		  </td>
+	    </tr>
+	  </table>	  </td>
+	  </tr>
+	  <tr>
+        <td class="style13" colspan="2" >
+	<u><span class="style9">Terms and  Conditions:</span></u><span class="style9">&#13;<br>
+	<span class="style15">Production will only start once 50%  deposit has been paid and final artwork has been approved.&#13;</span><br>
+	Deposit and Final payments  are only accepted when a proof of payment is delivered.<br>
+	Proof of payment needs to be  e-mailed, faxed or hand delivered.<br>
+	For clarity, use the quote  number as the reference whene doing payments.<br>
+	Only Cash or Electronic  payments will be accepted.<br>
+	Jobs required within 48  Hours are regarded as rush jobs and carry a 35% loading surcarge.<br>
+	Goods will not be released  without final payment.<br>
+	Goods will remain property  of Gomad until fully paid.<br>
+	eliveries will be charged  for. </span>		&nbsp;</td>
+	  </tr>
+	  <tr>
+        <td><span class="style17">Payments must be made to:</span>ents must be made to:</td>
+		<td>&nbsp;</td>
+	  </tr>
+      <tr>
+        <td><span class="style19">Proof of payment to be faxed to:&nbsp;</span></td>
+		<td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><span class="style20">Quote Approved By:</span></td>
+		<td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+		<td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td colspan="2"><span class="style20">Name(Print):_____________________&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: ___________________&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign:_______________________</span></td>
+      </tr>
+      <tr>
+        <td>Quote Approved By:</td>
+		<td>&nbsp;</td>
+      </tr>
+    </table>    </td>
+        </tr>
+        <tr>
+          <td bgcolor="#FFFFFF">&nbsp;</td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr>
+    <td colspan="4">&nbsp;</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="3" align="center"><span class="style5">BEMAD  &copy; 2007</span></td>
+  </tr>
+</table>
+</body>
